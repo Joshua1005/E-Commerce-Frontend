@@ -40,10 +40,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
       </CardHeader>
       <CardContent className={"flex flex-col gap-2"}>
         <section className={"h-40 min-h-40 flex justify-center items-center"}>
-          <img
-            className={"max-w-full max-h-full"}
-            src={`src/assets/${image}`}
-          />
+          <img className={"max-w-full max-h-full"} src={`assets/${image}`} />
         </section>
         <section>
           <p className={"font-semibold"}>${formatCurrency(priceCents)}</p>
@@ -51,7 +48,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <section className={"flex items-center gap-2"}>
           <img
             className={"w-20"}
-            src={`src/assets/images/ratings/rating-${rating.stars * 10}.png`}
+            src={`assets/images/ratings/rating-${rating.stars * 10}.png`}
           />
           <span className={"text-sm"}>{rating.count}</span>
         </section>
