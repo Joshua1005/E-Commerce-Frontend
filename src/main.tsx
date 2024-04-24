@@ -6,10 +6,14 @@ import AuthProvider from "@/context/AuthProvider.tsx";
 import ProductsProvider from "@/context/ProductsProvider.tsx";
 import CartProvider from "./context/CartProvider.tsx";
 import { Toaster } from "@/components/ui/toaster.tsx";
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
+
+if (process.env.NODE_ENV === "production") {
+  disableReactDevTools();
+}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  // <React.StrictMode>
-  <>
+  <React.StrictMode>
     <Toaster />
     <AuthProvider>
       <ProductsProvider>
@@ -18,6 +22,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </CartProvider>
       </ProductsProvider>
     </AuthProvider>
-    {/* </React.StrictMode> */}
-  </>
+  </React.StrictMode>
 );
