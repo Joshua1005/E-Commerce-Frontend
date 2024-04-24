@@ -48,7 +48,7 @@ const CartItemCard: React.FC<Props> = ({
       <section className={"w-24 pr-5 flex justify-center items-start"}>
         <img
           className={"max-w-full max-h-full"}
-          src={`src/assets/${matchedProduct.image}`}
+          src={`assets/${matchedProduct.image}`}
         />
       </section>
       <section className={"leading-7 flex-1"}>
